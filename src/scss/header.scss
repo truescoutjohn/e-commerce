@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #aaa;
+}
+
+.card__item {
+  cursor: pointer;
+}
+
+.navbar-vertical {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.good {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.content {
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+
+.history {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

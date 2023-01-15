@@ -1,0 +1,141 @@
+body {
+  font-family: Open Sans;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+// variables
+
+$cmgrijs: #f8f8f8;
+$cmgroen: #69bc9a;
+$cmdonkergroen: #59ab89;
+$cmrood: #f16d62;
+$cmroodHover: #e0665a;
+$borderColor: #cdcdcd;
+
+// mixins
+
+@mixin user-select($selectable) {
+  -webkit-user-select: $selectable;
+  -moz-user-select: $selectable;
+  -ms-user-select: $selectable;
+  user-select: $selectable;
+}
+
+// _header.scss
+
+.cart__wrapper {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding-top: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+
+  &.active {
+    display: block;
+  }
+}
+
+// materialize
+
+// Transitions
+
+@mixin transition($args: 200ms) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  -ms-transition: $args;
+  transition: $args;
+}
+@mixin transition-delay($delay: 0) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+  transition-delay: $delay;
+}
+@mixin transition-duration($duration: 200ms) {
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  -ms-transition-duration: $duration;
+  transition-duration: $duration;
+}
+@mixin transition-property($property: all) {
+  -webkit-transition-property: $property;
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -ms-transition-property: $property;
+  transition-property: $property;
+}
+@mixin transition-timing-function($function: ease) {
+  -webkit-transition-timing-function: $function;
+  -moz-transition-timing-function: $function;
+  -o-transition-timing-function: $function;
+  -ms-transition-timing-function: $function;
+  transition-timing-function: $function;
+}
+
+// shared styles
+.btn,
+.btn-flat {
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 13px;
+  color: #f16d62;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  // margin-bottom: 15px;
+  outline: 0;
+  padding: 0 7px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-flat {
+  box-shadow: none;
+  background-color: transparent;
+  color: #f16d62;
+  cursor: pointer;
+}
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  // white-space: nowrap;
+  // outline: 0;
+  @include transition(all 0.3s ease-out);
+
+  vertical-align: middle;
+  // cursor: pointer;
+  // border: none;
+  // outline: none;
+  // color: inherit;
+  // background-color: rgba(0, 0, 0, 0);
+  // font-size: 1em;
+  // line-height:1em;
+  // text-align: center;
+  // text-decoration: none;
+  z-index: 1;
+  will-change: opacity, transform;
+
+  // Waves Colors
+  &.waves-orange .waves-ripple {
+    background-color: rgba(255, 152, 0, 0.7);
+  }
+}

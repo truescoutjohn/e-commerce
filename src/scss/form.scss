@@ -1,0 +1,28 @@
+#form-login,
+#form-register {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+
+  &.active {
+    display: block;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background-color: #00000088;
+
+  &.active {
+    display: block;
+  }
+}
